@@ -27,7 +27,7 @@ class ShopCountry extends DBVarchar
         if (!$val) {
             $val = $this->value;
         }
-        return _t(__CLASS__ . '.' . $this->value, $val);
+        return IntlLocales::singleton()->countryName($this->value);
     }
 
     public function XML()
