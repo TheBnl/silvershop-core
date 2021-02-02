@@ -11,12 +11,21 @@ We've put a strong focus on testing, and thanks to TravisCI, you can see the [bu
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/silvershop/silvershop-core/badges/quality-score.png?s=d60753d6cca3817e80aca3dbb79eb5bd4140c981)](https://scrutinizer-ci.com/g/silvershop/silvershop-core/)
 [![Total Downloads](https://poser.pugx.org/silvershop/core/downloads.png)](https://packagist.org/packages/silvershop/core)
 
-* Website: http://silvershop.github.io
-* Demo: http://demo.ss-shop.org
+* Website: http://www.silvershop.io
+* Demo: https://demo.silvershop.io
 
 Your contributions, and feedback are welcomed and appreciated. There are many ways you can [contribute to this project](https://github.com/silvershop/silvershop-core/wiki/Contributing).
 A tremendous thanks to [everyone that has already contributed](https://github.com/silvershop/silvershop-core/graphs/contributors).
 
+
+## Requirements
+
+ * SilverStripe 4.0.2 or higher [framework](https://github.com/silverstripe/silverstripe-framework) & [cms](https://github.com/silverstripe/silverstripe-cms)
+ * [Omnipay Module](https://github.com/burnbright/silverstripe-omnipay) + its dependencies.
+
+See `composer.json` for exact set of dependencies.
+
+For a SilverStripe 3.x compatible version, please use a 2.x release.
 
 ## Stay up to date / get in touch
 
@@ -25,23 +34,17 @@ A tremendous thanks to [everyone that has already contributed](https://github.co
 * Live chat on Gitter! [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/silvershop/silvershop-core?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 * [Twitter](https://twitter.com/silvershopcore)
 
-## Requirements
-
- * SilverStripe 3.1 or higher [framework](https://github.com/silverstripe/silverstripe-framework) & [cms](https://github.com/silverstripe/silverstripe-cms)
- * [Omnipay Module](https://github.com/burnbright/silverstripe-omnipay) + its dependencies.
-
-See `composer.json` for exact set of dependencies.
-
 ## Documentation
 
- * http://demo.ss-shop.org/docs - for Developers & Users
+ * https://github.com/silvershop/silvershop-core/blob/master/docs/en/index.md - for Developers
+ * https://github.com/silvershop/silvershop-core/blob/master/docs_user/en/index.md - for Users
 
 ## Installation Instructions
 
-To install silverstripe + shop into a directory called 'myshop', using [composer](http://doc.silverstripe.org/framework/en/installation/composer), run the following commands:
+To install SilverShop using [composer](http://doc.silverstripe.org/framework/en/installation/composer), run the following command:
+
 ```
-composer create-project silverstripe/installer myshop
-composer require -d myshop "silvershop/core"
+composer require silvershop/core
 ```
 
 ### Build Tasks
@@ -67,9 +70,4 @@ Futher functionality is provided by add-on submodules.
 
 ## Add-on Sub Modules
 
-Don't reinvent the wheel! Get additional pre-built functionality with sub modules. All additional functional will be tagged on [packgist](https://packagist.org/search/?q=silverstripe%20shop) or [github](https://github.com/search?q=silverstripe+shop).
-
-The code for the [shop demo site](http://demo.ss-shop.org/) is available here:
-
-https://github.com/burnbright/silverstripe-shop-demo
-
+Don't reinvent the wheel! Get additional pre-built functionality with sub modules. All additional functional will be tagged on [packgist](https://packagist.org/search/?q=silvershop) as #silvershop

@@ -1,4 +1,56 @@
-# SilverStripe Shop Change Log
+# SilverShop ChangeLog
+
+## Unreleased 3.x
+
+- Add new `VisibleToCustomer` flag to `OrderStatusLog`. Use it alongside the existing `SentToCustomer` flags to allow developers to store additional admin-only log messages attached to orders.
+- Add new `order_is_required` config flag to `OrderStatusLog`, set to true by default (for backwards-compatibility). Set it to `false` to allow `OrderStatusLog` objects to be created that are not linked to any particular `Order` object.
+
+## 3.0.0
+
+Introduces SilverStripe 4 support and full namespaces.
+
+### Removals
+
+ - Removed all Dashboard classes. The dashboard module is not yet ready for SilverStripe 4.
+ This functionality should be added via a separate module whenever the need for it arises.
+ - `ShopAccountFormValidator` was removed. It was there to fix a core issue that no longer exists in SS4
+ - `Zone` and regions have been moved out to the `silvershop-shipping` module
+ - `CostPrice` was removed from `Product` as it is not used and creates confusion for content-authors.
+ - `ShopEmail` was removed, as it's no longer needed with the new SwiftMailer API.
+
+## 2.3.1
+
+Fix a bug (regression) where the variation-form was no longer displayed in cart.
+
+## 2.3.0
+
+ - Fix issue with unset failover object. Improve travis config. (#611)
+ - Migrate to using beforeUpdateCMSFields
+ - Use Buyable instead of Product in CartEditField (#606)
+ - Placed added to group by (#603)
+ - Fix message encoding issue with VariationForm (#601)
+ - Fix issue with potentailly non-existing failover object. (#600)
+ - Allow extensions to hook into the permission methods of Order. (#599)
+ - Some minor documentation improvements. Added a section about CSV import and additional categories (#592)
+ - Fix issue in CheckoutStep_Summary.php (#591)
+ - Fix issue where VariationForm fields had no form value set (#589)
+
+## 2.2.1
+
+Security Update: Updated indirect PHPMailer dependency that fixes a critical security issue.
+
+## 2.2.0
+
+ * Fix GlobalTaxModifier (Roman Schmid)
+ * Improve/enable custom properties on OrderItems. (Roman Schmid)
+ * fix price in templates (rasstislav)
+ * Ensure payment forms use the field renaming feature added to the omnipay module. Updated composer.json (Roman Schmid)
+ * removed old code from SimpleShippingModifier. It now simply looks at order shipping adress country to determine the shipping cost (Sander Hagenaars)
+ * Fix variation title so it can be extended (Adrian Stein)
+ * Improving the PHPDocs (Chris Lock)
+ * Setting the Type in constructor (Bram de Leeuw)
+ * Added a config hook to use a custom notifier (#570) (Chris Lock)
+ * Fix german translation file. (Roman Schmid)
 
 ## 2.1.1
 
@@ -8,13 +60,13 @@
 ## 2.1
 
  * Order-Status Email notifications #534
- * Improve previewing and developing of Email templates #551 
- * append symbol setting for European style currencies #549 
- * Improve order-hooks #557 
+ * Improve previewing and developing of Email templates #551
+ * append symbol setting for European style currencies #549
+ * Improve order-hooks #557
  * FIX: Set Order->Paid Date alongside Order->Status
  * FIX: Add reverse relation for addresses
  * Updates to templates (validating markup, proper indentation)
- * Improvements to documentation and example files. 
+ * Improvements to documentation and example files.
 
 ## 2.0
 
